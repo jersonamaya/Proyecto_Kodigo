@@ -3,6 +3,7 @@ import Menu from './Menu'
 import Tabla from './Tabla'
 import axios from "axios"
 import CelularesFORM from './CelularesFORM'
+import Loading from './Loading'
 
 const CelularesCRUD = () => {
 
@@ -38,12 +39,11 @@ const CelularesCRUD = () => {
 
             {
                 celulares === undefined ?
-                    <div>
-                        <div className="spinner-border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
-                        <h2>Cargando...</h2>
-                    </div>
+                <div>
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden"></span>
+                </div>
+            </div>
                     :
                     <Tabla evento={configurar} controlador="celulares" lista={celulares} cols={["Celular ID", "Marca", "Modelo", "Color", "Precio", "Descripción", "Operadora"]} />
             }

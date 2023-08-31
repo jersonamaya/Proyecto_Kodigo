@@ -1,6 +1,6 @@
 function textoRandom(){
     var texto = ("404notfound");
-    var letra = texto[Math.floor(Math.random() * texto.length)];
+    let letra = texto[Math.floor(Math.random() * texto.length)];
     return letra;
 }
 
@@ -10,7 +10,6 @@ function lluvia(){
     let left = Math.floor(Math.random() * 310);
     let tamanyo = Math.random() * 1.5;
     let duracion = Math.random() * 1;
-
     e.classList.add('text');
     nube.appendChild(e);
     e.innerText = textoRandom();

@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./Menu";
 import './../notfound.css';
-import './../notfound.js';
+//import './../notfound.js';
 
 function NotFound() {
 

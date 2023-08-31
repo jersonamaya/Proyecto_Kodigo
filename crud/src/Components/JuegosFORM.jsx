@@ -177,22 +177,24 @@ function JuegosFORM({ id, del, actualizar }) {
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Campo incorrecto</div>
                 </div>
-                <div className="form-group mb-3">
-                    <label className="form-label">Precio:</label>
-                    <input className="form-control" required type="text" disabled={del} value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="Ingrese precio" />
-                    <div className="valid-feedback">Correcto</div>
-                    <div className="invalid-feedback">Campo incorrecto</div>
-                </div>
-                <div className="form-group mb-3">
-                    <label className="form-label">Categoría:</label>
-                    <input className="form-control" required type="text" disabled={del} value={categoria} onChange={(e) => setCategoria(e.target.value)} placeholder="Ingrese categoría" />
-                    <div className="valid-feedback">Correcto</div>
-                    <div className="invalid-feedback">Campo incorrecto</div>
+                <div  style={{ display: id !== undefined ? 'flex' : 'block' }}>
+                    <div className={`form-group mb-3 col-${id !== undefined ? '6' : '12'}`}>
+                        <label className="form-label">Precio:</label>
+                        <input className="form-control" required type="number" disabled={del} value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="Ingrese precio" />
+                        <div className="valid-feedback">Correcto</div>
+                        <div className="invalid-feedback">Campo incorrecto</div>
+                    </div>
+                    <div className={`form-group mb-3 col-${id !== undefined ? '6' : '12'}`}>
+                        <label className="form-label">Categoría:</label>
+                        <input className="form-control" required type="text" disabled={del} value={categoria} onChange={(e) => setCategoria(e.target.value)} placeholder="Ingrese categoría" />
+                        <div className="valid-feedback">Correcto</div>
+                        <div className="invalid-feedback">Campo incorrecto</div>
+                    </div>
                 </div>
 
                 <div className='modal-footer form-group mb-3'>
-                    <input onClick={(e) => enviar(e)} type="submit" className={`btn btn-${id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
-                    <button id="btnCancelar" data-bs-dismiss="modal" onClick={(e) => cancelar(e)} className='btn btn-warning'>Cancelar</button>
+                    <input onClick={(e) => enviar(e)} type="submit" className={`boton boton-${id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
+                    <button id="btnCancelar" data-bs-dismiss="modal" onClick={(e) => cancelar(e)} className='boton boton-warning'>Cancelar</button>
                 </div>
             </form>
         </div>

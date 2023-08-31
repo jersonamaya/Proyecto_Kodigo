@@ -3,6 +3,7 @@ import Menu from './Menu'
 import axios from "axios"
 import Tabla from './Tabla'
 import JuegosFORM from "./JuegosFORM"
+import Loading from './Loading'
 
 const JuegosCRUD = () => {
   
@@ -37,10 +38,7 @@ const JuegosCRUD = () => {
         {
           juegos === undefined ?
           <div>
-            <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </div>
-            <h2>Cargando...</h2>
+            <Loading></Loading>
           </div>
           :
           <Tabla lista={juegos} evento={configurar} controlador="juegos" cols={["Juego ID", "Título", "Descripcion", "Plataforma", "Precio", "Categoría"]} />

@@ -16,10 +16,10 @@ const Menu = () => {
                                 <Link className="nav-link active" to={"/"}>Inicio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to={"/autores"}>Celulares</Link>
+                                <Link className="nav-link active" to={"/celulares"}>Celulares</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to={"/libros"}>Juegos</Link>
+                                <Link className="nav-link active" to={"/juegos"}>Juegos</Link>
                             </li>
                         </ul>
                     </div>

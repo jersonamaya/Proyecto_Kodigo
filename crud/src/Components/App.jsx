@@ -16,8 +16,8 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/autores" element={<CelularesCRUD />} />
-                <Route path="/libros" element={<JuegosCRUD />} />
+                <Route path="/celulares" element={<CelularesCRUD />} />
+                <Route path="/juegos" element={<JuegosCRUD />} />
                 <Route path="*" element={<NotFound />} />
 
             </Routes>

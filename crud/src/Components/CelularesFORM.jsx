@@ -135,7 +135,7 @@ const CelularesFORM = ({ id, del, actualizar }) => {
                 operadora: operadora
             }
 
-            let res = await axios.post("https://denny2023.azurewebsites.net/api/autores", celular)
+            let res = await axios.post("https://denny2023.azurewebsites.net/api/celulares", celular)
             let datos = res.data
 
             alert(datos.message)
@@ -162,22 +162,22 @@ const CelularesFORM = ({ id, del, actualizar }) => {
     return (
         <div>
             <form id="formulario" className='needs-validation' noValidate>
+                <div style={{'display': 'flex'}}>
                 {
                     id !== undefined ?
-                        <div className='form-group mb-3'>
+                        <div className='form-group mb-3 col-6'>
                             <label className='form-label'>ID:</label>
                             <input type="text" value={id} readOnly disabled className="form-control" />
                         </div>
                         :
                         ""
                 }
-
-
-                <div className='form-group mb-3'>
+                <div className={`form-group mb-3 col-${id !== undefined ? '6' : '12'}`}>
                     <label className='form-label'>Marca:</label>
                     <input required type="text" value={marca} onChange={(e) => setMarca(e.target.value)} className="form-control" disabled={del} placeholder="Ingrese marca" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Campo incorrecto</div>
+                </div>
                 </div>
                 <div className='form-group mb-3'>
                     <label className='form-label'>Modelo:</label>
@@ -185,17 +185,19 @@ const CelularesFORM = ({ id, del, actualizar }) => {
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Campo incorrecto</div>
                 </div>
-                <div className='form-group mb-3'>
+                <div style={{'display': 'flex'}}>
+                <div className='form-group mb-3 col-6'>
                     <label className='form-label'>Color:</label>
                     <input required type="text" value={color} onChange={(e) => setColor(e.target.value)} className="form-control" disabled={del} placeholder="Ingrese color" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Campo incorrecto</div>
                 </div>
-                <div className='form-group mb-3'>
+                <div className='form-group mb-3 col-6'>
                     <label className='form-label'>Precio:</label>
-                    <input required type="text" value={precio} onChange={(e) => setPrecio(e.target.value)} className="form-control" disabled={del} placeholder="Ingrese precio" />
+                    <input required type="number" value={precio} onChange={(e) => setPrecio(e.target.value)} className="form-control" disabled={del} placeholder="Ingrese precio" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Campo incorrecto</div>
+                </div>
                 </div>
                 <div className='form-group mb-3'>
                     <label className='form-label'>Descripción:</label>
@@ -211,8 +213,8 @@ const CelularesFORM = ({ id, del, actualizar }) => {
                 </div>
 
                 <div className='modal-footer form-group mb-3'>
-                    <input onClick={(e) => enviar(e)} type="submit" className={`btn btn-${id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
-                    <button id="btnCancelar" data-bs-dismiss="modal" onClick={(e) => cancelar(e)} className='btn btn-warning'>Cancelar</button>
+                    <input onClick={(e) => enviar(e)} type="submit" className={`boton boton-${id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
+                    <button id="btnCancelar" data-bs-dismiss="modal" onClick={(e) => cancelar(e)} className='boton boton-warning'>Cancelar</button>
                 </div>
             </form>
         </div>

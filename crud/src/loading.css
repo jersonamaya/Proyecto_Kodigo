@@ -1,0 +1,36 @@
+.progress-spinner {
+
+    display: grid;
+    grid-column: 2fr 2fr;
+    justify-content: center;
+    text-align: center;
+}
+
+.text {
+    justify-content: center;
+    margin: 250px 0px 100px 0px;
+    font-size: 40px;
+    color: #009a9a;
+    font-weight: bolder;
+}
+
+.progress {
+    width: 50rem;
+    height: 2rem;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.inner {
+    height: 100%;
+    border-radius: 50px;
+    background-color: #009a9a;
+    transform-origin: left;
+    animation: progress .7s infinite;
+}
+
+@keyframes progress {
+    from { transform: scaleX(5%) translateX(-5%);}
+    to { transform: scaleX(75%) translateX(130%);}
+}
