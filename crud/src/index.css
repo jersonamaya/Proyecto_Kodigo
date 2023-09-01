@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background-color: #008080;
+}
+
+/*Estilos para la barra de desplazamiento*/
+body::-webkit-scrollbar,
+td::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track,
+td::-webkit-scrollbar-track {
+  background: #008080;
+}
+
+body::-webkit-scrollbar-thumb,
+td::-webkit-scrollbar-thumb {
+  background-color: #009a9a;
+  border-radius: 20px;
+  border: 1px solid #00cdcd;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.boton-menu {
+  font-weight: bold;
+  font-size: 20px;
+  background: -webkit-linear-gradient(#009a9a,#00cdcd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boton {
+  width: 90px;
+  padding: 10px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  transition: 200ms;
+}
+
+.boton-success {
+  background-color: #009a9a;
+  box-shadow: 2px 2px 3px #00cdcd;
+}
+
+.boton-success:hover {
+  background-color: #008080;
+}
+
+.boton-primary {
+  background-color: #2f3ede;
+  box-shadow: 2px 2px 3px #5f6be9;
+  margin-right: 5px;
+}
+
+.boton-primary:hover {
+  background-color: #212ec0;
+}
+
+.boton-danger {
+  background-color: #e23636;
+  box-shadow: 2px 2px 3px #ea5959;
+  margin: 5px 0px;
+}
+
+.boton-danger:hover {
+  background-color: #c82424;
+}
+
+.boton-warning {
+  background-color: #ea990e;
+  box-shadow: 2px 2px 3px #eca62d;
+}
+
+.boton-warning:hover {
+  background-color: #ce880e;
+}
+
+.boton-close {
+  width: 25px;
+  height: 25px;
+  padding: 10px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  transition: 200ms;
+  background-color: #e23636;
+  box-shadow: 2px 2px 3px #ea5959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-close:hover {
+  background-color: #c82424;
+}
+
+tr {
+  border-color: #009a9a !important;
+}
+
+.tabla {
+  margin: 20px;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+td {
+  max-width: 250px;
+  overflow: auto;
+}
