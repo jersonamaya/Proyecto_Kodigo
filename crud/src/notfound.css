@@ -2,7 +2,6 @@
     margin: 0px;
     min-height: 88vh;
     padding: 15px;
-    background: #212ec0;
 }
 
 .texto {
@@ -14,7 +13,7 @@
     font-size: 30px;
     font-weight: bolder;
     border-radius: 100px;
-    filter: drop-shadow(0 0 2px #fff);
+    filter: drop-shadow(0 0 1px #fff);
 }
 
 .container {
@@ -29,13 +28,13 @@
 
 .nube {
     position: relative;
-    top: 150px;
+    top: 110px;
     width: 320px;
     height: 100px;
     background: #fff;
     border-radius: 100px;
     z-index: 100;
-    filter: drop-shadow(0 0 3px #fff);
+    filter: drop-shadow(0 0 1px #fff);
 }
 
 .nube::before {
@@ -51,7 +50,8 @@
 }
 
 .spinner {
-    filter: drop-shadow(0 0 3px #fff);
+    filter: drop-shadow(0 0 1px #fff);
+    margin-top: 15px;
 }
 
 .spinner-border {

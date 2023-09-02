@@ -11,7 +11,7 @@ const Tabla = ({ cols, controlador, lista, evento }) => {
 
     return (
         <div className='tabla'>
-            <table className='table align-right table-striped table-hover'>
+            <table className='table align-right table-hover' style={{'color': '#fff'}}>
                 <thead>
                     <tr>
                         <th>
